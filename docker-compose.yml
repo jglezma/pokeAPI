@@ -1,0 +1,23 @@
+version: "2.0"
+services:
+  server:
+    container_name: pokemon_server
+    build: ./packages/server-api
+    image: pokemon_server
+    networks:
+      - pokemon_network
+    ports:
+      - "3001:3001"
+  nginx:
+    container_name: pokemon_nginx
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: pokemon_nginx
+    ports:
+      - "8080:80"
+    networks:
+      - pokemon_network
+networks:
+  pokemon_network:
+    driver: bridge

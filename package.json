@@ -1,0 +1,25 @@
+{
+  "name": "Juan-pokeapi",
+  "version": "1.0.0",
+  "description": "Juan Pokeapi App",
+  "scripts": {
+    "start": "lerna run start",
+    "start:client": "lerna run start --scope=web-client",
+    "start:server": "lerna run start --scope=server-api",
+    "test": "lerna run test",
+    "new-version": "lerna version --conventional-commits --yes",
+    "diff": "lerna diff",
+    "dev": "lerna run dev",
+    "docker:build-all": "docker-compose build",
+    "docker:deploy": "docker-compose up -d",
+    "docker:dispose": "docker-compose down"
+  },
+  "author": "Juan Gonzalez",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^5.4.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

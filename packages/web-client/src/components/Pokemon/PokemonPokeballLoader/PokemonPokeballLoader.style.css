@@ -1,0 +1,22 @@
+.component-pokemon-pokeball {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.component-pokemon-pokeball svg {
+  width: 320px;
+  height: 320px;
+  animation: roll 1s ease-in-out infinite;
+}
+
+@keyframes roll {
+  from {
+    transform: rotate(0);
+  }
+  90%,
+  to {
+    transform: rotate(720deg);
+  }
+}

@@ -1,0 +1,34 @@
+.component-pokemon-stat-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.component-pokemon-stat-bar .pokemon-stat-name {
+  color: #666;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 48px;
+}
+
+.component-pokemon-stat-bar .split {
+  width: 1px;
+  height: 100%;
+  background-color: #66666688;
+  margin: 0 8px 0 4px;
+}
+
+.component-pokemon-stat-bar .bar-container {
+  display: flex;
+  width: 100%;
+}
+
+.component-pokemon-stat-bar .bar,
+.component-pokemon-stat-bar .bar-container {
+  height: 4px;
+  border-radius: 4px;
+}

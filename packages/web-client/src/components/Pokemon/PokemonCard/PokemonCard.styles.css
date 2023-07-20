@@ -1,0 +1,99 @@
+.component-pokemon-card {
+  position: relative;
+  min-width: 360px;
+  min-height: 640px;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 0px 0px;
+}
+
+.component-pokemon-card .pokeball-icon {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+
+.component-pokemon-card .pokemon-card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 32px;
+  padding: 24px 16px;
+}
+
+.component-pokemon-card .pokemon-name {
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: capitalize;
+}
+
+.component-pokemon-card .pokemon-id {
+  color: #fff;
+  text-align: right;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 32px;
+}
+
+.component-pokemon-card .pokemon-card-body {
+  position: relative;
+  background-color: #fff;
+  height: 412px;
+  width: 100%;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 56px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.component-pokemon-card .lazy-load-image-background {
+  position: absolute;
+  top: -144px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.component-pokemon-card .lazy-load-image-background .pokemon-image {
+  width: 200px;
+  height: 200px;
+}
+
+.component-pokemon-card .pokemon-info-container {
+  display: flex;
+  gap: 16px 40px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.component-pokemon-card .pokemon-base-stats-text {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 16px;
+  line-height: 76%;
+  margin-bottom: 8px;
+}
+
+.component-pokemon-card .pokeball-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.component-pokemon-card .pokeball-container svg {
+  position: absolute;
+  cursor: pointer;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+}

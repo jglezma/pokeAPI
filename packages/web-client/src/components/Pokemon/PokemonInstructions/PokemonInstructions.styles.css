@@ -1,0 +1,60 @@
+.component-pokemon-instructions {
+  position: fixed;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  color: #212121;
+  text-align: center;
+  font-size: 18px;
+  padding: 16px;
+  min-width: 412px;
+  width: 100%;
+  z-index: 9000;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.component-pokemon-instructions p {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 40px;
+}
+
+.component-pokemon-instructions p svg {
+  margin: 0px 8px;
+}
+
+.component-pokemon-instructions p span:nth-child(1) {
+  position: relative;
+}
+
+.component-pokemon-instructions p span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 308px;
+}
+
+.component-pokemon-instructions p span:nth-child(2) {
+  color: #666;
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.component-pokemon-instructions p span:nth-child(1):after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 88px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}

@@ -1,0 +1,30 @@
+.component-pokemon-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 64px;
+}
+
+.component-pokemon-info .pokemon-info-type {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 8px;
+}
+
+.component-pokemon-info .pokemon-info-type svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+
+.component-pokemon-info .pokemon-info-value {
+  font-size: 12px;
+  text-transform: capitalize;
+  text-align: center;
+  color: #666;
+}

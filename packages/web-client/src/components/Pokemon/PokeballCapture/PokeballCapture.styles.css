@@ -1,0 +1,194 @@
+.component-pokeball-capture {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.component-pokeball-capture svg {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+}
+
+.component-pokeball-capture--tocapture svg,
+.component-pokeball-button-tocapture {
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+
+.component-pokeball-button-tocapture:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.component-pokeball-capture--capturing {
+  animation: wiggle 1s infinite;
+}
+
+.component-pokeball-capture--capturing::after,
+.component-pokeball-capture--wasCaptured::after {
+  content: "";
+}
+
+.component-pokeball-button-tocapture,
+.component-pokeball-capture--capturing::after,
+.component-pokeball-capture--wasCaptured::after {
+  position: absolute;
+  top: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.component-pokeball-capture--wasCaptured::after {
+  animation: catch 0.2s 1 steps(1, start);
+  animation-delay: 0.46s;
+  animation-fill-mode: forwards;
+}
+
+.component-pokeball-capture .star svg {
+  width: 24px;
+  height: 24px;
+}
+
+.component-pokeball-capture .star {
+  position: absolute;
+}
+
+.component-pokeball-capture .stars-container {
+  position: absolute;
+  width: 88px;
+  height: 24px;
+  top: 0px;
+  left: 150px;
+}
+
+.component-pokeball-capture .star1 {
+  left: 0;
+  opacity: 0;
+  animation: star1 0.45s linear 1;
+}
+
+.component-pokeball-capture .star2 {
+  opacity: 0;
+  left: 33%;
+  animation: star2 0.45s linear 1;
+}
+
+.component-pokeball-capture .star3 {
+  opacity: 0;
+  left: 70%;
+  animation: star3 0.45s linear 1;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(-16deg);
+  }
+  20% {
+    transform: rotate(16deg);
+  }
+  30% {
+    transform: rotate(-16deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes star1 {
+  0% {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transform: rotate(0);
+  }
+  40% {
+    top: -40px;
+    left: -30px;
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    top: -20px;
+    left: -50px;
+    opacity: 1;
+    transform: rotate(-45deg) scale(1.2);
+  }
+  100% {
+    top: -20px;
+    left: -50px;
+    opacity: 0;
+    transform: rotate(-60deg) scale(1);
+  }
+}
+
+@keyframes star2 {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  40% {
+    top: -80px;
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    top: -50px;
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    top: -50px;
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes star3 {
+  0% {
+    top: 0;
+    opacity: 1;
+    transform: rotate(0);
+  }
+  40% {
+    top: -40px;
+    left: calc(70% + 30px);
+    opacity: 1;
+    transform: scale(1);
+  }
+  80% {
+    top: -20px;
+    left: calc(70% + 50px);
+    opacity: 1;
+    transform: rotate(45deg) scale(1.2);
+  }
+  100% {
+    top: -20px;
+    left: calc(70% + 50px);
+    opacity: 0;
+    transform: rotate(60deg) scale(1);
+  }
+}
+
+@keyframes catch {
+  0% {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0);
+  }
+}
