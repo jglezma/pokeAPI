@@ -2,7 +2,7 @@
 
 With socket.io we can sync our clients when we catch a pokemon!
 
-![](docs/demo.gif)
+![](docs/demo.png)
 
 ## Getting started
 
